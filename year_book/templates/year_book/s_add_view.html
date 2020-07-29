@@ -1,0 +1,13 @@
+{% extends 'user2.html' %}
+{% block title %}YearBook | Admin{% endblock %}
+{% block content%}
+    {% load static %}
+<div align="center">
+<div class="shadow-sm p-3 mb-5 bg-white rounded" align="center">
+{#<span> </span><br>#}
+ <a class="navbar-brand bg-light navbar-light" href="{% url 'add_s_achv'%}"><img src="{% static 'images/more.png' %}">  Add Student Achievements</a><br>
+{#    <span><img src="{% static 'images/open-menu.png' %}">View Teacher Achievements</span>#}<br><br>
+<a class="navbar-brand bg-light navbar-light" href="{% url 'admin_s_achv' 'student'%}"><img src="{% static 'images/open-menu.png' %}">  View Student Achievements</a>
+</div>
+</div>
+{% endblock %}

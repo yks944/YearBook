@@ -1,0 +1,31 @@
+{% extends 'user2.html' %}
+{% block title %}YearBook | Achievements{% endblock %}
+{% block content%}
+    {% load static %}
+    <div class="shadow p-3 mb-5 bg-white rounded">
+    <center>
+        <img src="{% static 'images/STUDENT.png'%}" height="200" width="200">
+       <div>
+            <b> ACHIEVEMENTS OF {{ achv_of }}</b>
+    <form action="{% url 'admin_achv_list' achv_of %}" method="POST">
+        {% csrf_token %}
+        Session Year <select name="year" class="form-group">
+        <option value="2017" >2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+
+    </select>
+        <br>
+        Branch <select name="branch" class="form-group">
+        <option value="CSE">CSE</option>
+        <option value="EC">EC</option>
+        <option value="CIVIL">CIVIL</option>
+        <option value="MECH">MECH</option>
+    </select><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+       </div>
+    </center>
+    </div>
+{% endblock %}

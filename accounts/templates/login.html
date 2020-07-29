@@ -1,0 +1,35 @@
+
+{% extends 'base1.html' %}
+{% block title %}YearBook | Login{% endblock %}
+{% block content %}
+   <h1>Login!</h1>
+<div class="select2-container--admin-autocomplete">
+<form method="POST" action="{% url 'login' %}">
+{% csrf_token %}
+    Username:
+    <br>
+<input type="text" name="username"/>
+<br>
+Password:
+<br>
+<input type="password" name="password"/>
+<br>
+User Type:
+    <br>
+    <select name="user_type">
+        <option value="Admin">Admin</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Student">Student</option>
+
+    </select>
+<br>
+    <br>
+<input class="btn btn-primary" type="submit" value="Login!">
+</form>
+</div>
+    <div>
+    {% if msg %}
+        {{ msg }}
+    {% endif %}
+    </div>
+{% endblock %}

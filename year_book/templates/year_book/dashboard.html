@@ -1,0 +1,35 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#{% if user.is_authenticated %}#}
+{#    <div>Hello {{ user }}</div>#}
+{#    <a href="{% url 'signout' %}">Logout</a>#}
+{#    <a href="{% url 'profile' %}">Profile</a>#}
+{#    {% else %}#}
+{#    <script>#}
+{#    window.location.href="/accounts/signin/";#}
+{#    </script>#}
+{#{% endif %}#}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
+{##}
+{% extends 'user.html' %}
+{% block title %}YearBook | Dashboard{% endblock %}
+{% block content %}
+    {% load static %}
+    {% csrf_token %}
+    <center>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <span style="text-align: center">
+            <img src="{% static 'images/'%}{{ type }}.png" height="300" width="300">
+        <span style="font-size: larger;text-align: center">Welcome {{ user }}</span>
+        </span>
+    </div>
+    </center>
+{% endblock %}

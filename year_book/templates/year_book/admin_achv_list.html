@@ -1,0 +1,27 @@
+{% extends 'user2.html' %}
+{% block title %}YearBook | Achievements{% endblock %}
+{% block content%}
+    <div class="container-fluid">
+    {% if list %}
+        <table class="table table-hover">
+        <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Year</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+        <tbody>
+
+        {% for i in list%}
+            <tr><td>{{ i.username }}</td><td>{{ i.year }}</td><td>{{ i.branch }}</td><td><a class="btn btn-primary" href="{% url 'admin_achv_detailed' utype i.username%}" role="button">View Details</a></td></tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+        {% else %}
+        {{ empty }}
+    {% endif %}
+    </div>
+{% endblock %}

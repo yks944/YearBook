@@ -1,0 +1,23 @@
+{% extends 'user2.html' %}
+{% block title %}YearBook | Detail{% endblock %}
+{% load static %}
+{% block content %}
+
+     <div class="container-fluid">
+    {% if detail %}
+        <table class="table table-hover">
+
+        <tbody>
+
+
+        <tr><td rowspan="{{ length }}"><div class="text-center"><img src="{% static 'images/'%}{{ imgtype}}.png" height="400" width="200"></div></td></tr>
+       {% for k,v in detail.items %}
+           <tr><td><b>{{ k }}</b></td><td>{{ v }}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        {% else %}
+        {{ empty }}
+    {% endif %}
+    </div>
+{% endblock %}

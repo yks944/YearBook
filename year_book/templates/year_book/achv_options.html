@@ -1,0 +1,11 @@
+{%  extends 'user.html' %}
+{% block title %}YearBook | Achievements{% endblock %}
+{% block content %}
+    {% load static %}
+   <div class="shadow p-3 mb-5 bg-white rounded"><center><img src="{% static 'images/STUDENT.png' %}" height="200" width="200">
+    <a class="navbar-brand bg-light navbar-light" href="{% url 'category' 'student' %}">View Student Achievements</a><br></center>
+   </div>
+    <div class="shadow p-3 mb-5 bg-white rounded"><center><img src="{% static 'images/TEACHER.png' %}" height="200" width="200">
+    <a class="navbar-brand bg-light navbar-light" href="{% url 'category' 'teacher' %}">View Teacher Achievements</a><br></center>
+   </div>
+{% endblock %}

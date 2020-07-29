@@ -1,0 +1,14 @@
+{% extends 'user2.html' %}
+{% block title %}YearBook | Dashboard{% endblock %}
+{% block content %}
+    {% load static %}
+    {% csrf_token %}
+    <center>
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <span style="text-align: center">
+            <img src="{% static 'images/'%}{{ type }}.png" height="300" width="300">
+        <span style="font-size: larger;text-align: center">Welcome {{ user }}</span>
+        </span>
+    </div>
+    </center>
+{% endblock %}

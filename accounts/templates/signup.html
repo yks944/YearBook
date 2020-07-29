@@ -1,0 +1,74 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#<form action="{% url 'signup' %}" method="POST">#}
+{#    {% csrf_token %}#}
+{#    Enroll<input type="text" name="enroll"><br>#}
+{#Username<input type="text" name="username"><br>#}
+{#Pass<input type="password" name="password"><br>#}
+{#mail<input type="email" name="email"><br>#}
+{#add<input type="text" name="address"><br>#}
+{#mob<input type="number" name="mobile" minlength="10"><br>#}
+{#category<input type="text" name="category"><br>#}
+{#<input type="submit" value="signup">#}
+{#</form>#}
+{#{% if msg %}#}
+{#    {{ msg }}#}
+{#{% endif %}#}
+{#</body>#}
+{#</html>#}
+
+{% extends 'base1.html' %}
+{% block title %}YearBook | Signup{% endblock %}
+{% block content %}
+   <h1>Signup!</h1>
+<div class="select2-container--admin-autocomplete">
+<form method="POST" action="{% url 'signup' %}">
+{% csrf_token %}
+    Enroll Number:
+    <br>
+<input type="text" name="enroll"/>
+<br>
+    Username:
+    <br>
+<input type="text" name="username"/>
+<br>
+Password:
+<br>
+<input type="password" name="password"/>
+<br>
+     Email:
+    <br>
+<input type="email" name="email"/>
+<br>
+     Address:
+    <br>
+<input type="text" name="address"/>
+<br>
+     Mobile No:
+    <br>
+<input type="number" name="mobile" minlength="10"/>
+<br>
+User Type:
+    <br>
+    <select name="user_type">
+        <option value="Admin">Admin</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Student">Student</option>
+
+    </select>
+<br>
+    <br>
+<input class="btn btn-primary" type="submit" value="Signup!">
+</form>
+</div>
+    <div>
+    {% if msg %}
+        {{ msg }}
+    {% endif %}
+    </div>
+{% endblock %}

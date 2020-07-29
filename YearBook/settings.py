@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'YearBook.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yearbook',
-        'USER': 'postgres',
-        'PASSWORD': 'abc',
-        'HOST': 'localhost',
+        'NAME': 'd6vqptndu9m6fp',
+        'USER': 'dgdpcjzdyeargy',
+        'PASSWORD': '8905740486e1e9daaf1ce8054d7d692a4002a1571dcbeb19b7037fdf441dfc04',
+        'HOST': 'ec2-3-215-83-17.compute-1.amazonaws.com',
 }
 }
 

@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n=1f%440^23r_7c*zt9&&)mlk#_y9_1^77co%nn!5lo104+*q5'
+SECRET_KEY = 'secret key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'YearBook.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6vqptndu9m6fp',
-        'USER': 'dgdpcjzdyeargy',
-        'PASSWORD': '8905740486e1e9daaf1ce8054d7d692a4002a1571dcbeb19b7037fdf441dfc04',
-        'HOST': 'ec2-3-215-83-17.compute-1.amazonaws.com',
+        'NAME': 'db name',
+        'USER': 'user',
+        'PASSWORD': 'pwd',
+        'HOST': 'host',
 }
 }
 
